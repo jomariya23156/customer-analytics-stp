@@ -9,7 +9,7 @@
 ref: https://www.yieldify.com/blog/stp-marketing-model/
   
 ## Data explanation
-&nbsp;&nbsp;&nbsp;&nbsp;This is a data from chocolate candy bar sales a local store in FMCG (Fast-Moving Consumer Goods) market. The data was modified to protect the customer privacy. We have 2 data files in total; 1 for segmentation and 1 for analysis.  
+&nbsp;&nbsp;&nbsp;&nbsp;This is a data from chocolate candy bar sales a local store in FMCG (Fast-Moving Consumer Goods) market. The data was modified to protect the customer privacy. We have 2 data files in total; 1 for segmentation and 1 for analysis, and we have 2 data-legend for both dataset.  
 
 ***Please refer to the files in 'dataset' folder for full data***
   
