@@ -4,7 +4,7 @@
 <b>*Note that we do only S and P in this project because T is more of marketing and finance than analyst.*</b>
 
 ## What STP is in a nutshell:
-&nbsp;&nbsp;&nbsp;&nbsp;STP marketing is an acronym for <b>Segmentation, Targeting, and Positioning</b> – a three-step model that examines your products or services as well as the way you communicate their benefits to specific customer segments.
+&nbsp;&nbsp;&nbsp;&nbsp;STP marketing is an acronym for <b>Segmentation, Targeting, and Positioning</b> – a three-step model that examines your products or services as well as the way you communicate their benefits to specific customer segments.  
 <img src="./images/STP.jpg" width="700" height="350">  
 ref: https://www.yieldify.com/blog/stp-marketing-model/
   
@@ -13,10 +13,10 @@ ref: https://www.yieldify.com/blog/stp-marketing-model/
 
 ***Please refer to the files in 'dataset' folder for full data***
   
-This is an example data of <b>segmentation data</b> (dataset/segmentation data.csv):
+This is an example data of <b>segmentation data</b> (dataset/segmentation data.csv):  
 ![segment data](./images/segmentation_data.jpg)
   
-This is an example data of <b>purchase data</b> (dataset/purchase data.csv):
+This is an example data of <b>purchase data</b> (dataset/purchase data.csv):  
 ![purchase data](./images/purchase_data.jpg)  
   
 ## Plan to attack
@@ -39,22 +39,22 @@ This is an example data of <b>purchase data</b> (dataset/purchase data.csv):
 ## Results
 ***This is a very insightful project, if we put all the results on the Github page, it will be too long to read. If you are really interested in the results, please take a look closely at all 3 .ipynb files. We wrote all the insights we found, the best-fit strategies, and all the results in there. We will provide only brief results here in Github page.***
     
-We started by doing clustering analysis, before that we have to know which features would have most predictive powers. So, we use heatmap and correlation to do this.
+We started by doing clustering analysis, before that we have to know which features would have most predictive powers. So, we use heatmap and correlation to do this.  
 <img src="./images/heatmap.png" width="700" height="500">
   
-Next we will use <b>KMeans</b> clustering algorithm to do clustering analysis before that we need to know K value so we create dendrogram (take a look in the file) to find K value and we got 4. We still need to make sure of the best K values so we try diffrent values and plot the K value with its <b>WCSS</b>. And use <b>elbow method</b>
+Next we will use <b>KMeans</b> clustering algorithm to do clustering analysis before that we need to know K value so we create dendrogram (take a look in the file) to find K value and we got 4. We still need to make sure of the best K values so we try diffrent values and plot the K value with its <b>WCSS</b>. And use <b>elbow method</b>  
 <img src="./images/elbow.png" width="700" height="500">
   
-After every clustering analysis, we must take a look at the result and try to name each cluster following its characteristics. In our case, we can separate the clusters into 4 cluster which are <b>0 for Standard, 1 for Fewer-Opportunity, 2 for Career-Focused, 3 for Well-Off.</b>
+After every clustering analysis, we must take a look at the result and try to name each cluster following its characteristics. In our case, we can separate the clusters into 4 cluster which are <b>0 for Standard, 1 for Fewer-Opportunity, 2 for Career-Focused, 3 for Well-Off.</b>  
 <img src="./images/name_clusters.jpg">
   
-So from the elbow method, we see 4 is the most suitable one. But after we complete clustering and plot it on the graph colored by each cluster, we see that features cannot separate the values well enough. This is the sign that we need to do PCA or feature engineering. In this case we go for PCA.
+So from the elbow method, we see 4 is the most suitable one. But after we complete clustering and plot it on the graph colored by each cluster, we see that features cannot separate the values well enough. This is the sign that we need to do PCA or feature engineering. In this case we go for PCA.  
 <img src="./images/before_pca.png" width="700" height="500">
   
 When we do PCA, we have to choose the best n_features value. We use the same approach to try many values, but this time we plot against <b>cumulative sum</b>. There is no right or wrong to choose the number of components, but there is a rule of thumb good for consider number of component that can <b>contribute over 80%</b> is fine. In this case, 3 and 4 are worth trying. With values over 4 looks like to be too much.  
 <img src="./images/pca_cumulative.png" width="700" height="500">
   
-After we got the right PCA, it's a good idea to take a look at correlation heatmap again (we put this in the notebook). And plot the result of clustering analysis with PCA and KMeans.
+After we got the right PCA, it's a good idea to take a look at correlation heatmap again (we put this in the notebook). And plot the result of clustering analysis with PCA and KMeans.  
 <img src="./images/after_pca.png" width="700" height="500">
 
   
@@ -69,15 +69,15 @@ Then we take a look at some mean and std of each important indicators; average_v
 Next, the important one, the brand choices for each cluster. <b>Brand 1 to Brand 5 are ordered by the price which means Brand 1 is the cheapest and Brand 5 is the most expensive brand.</b> We can that Fewer-Opportunity prefers buying Brand 2. Brand 4 for Well-Off. Brand 5 for Career-focused. Standard is quite distributed sparsely all over. Remember that one of the component from PCA is income. So this is intuitively correct.  
 <img src="./images/brand_choices_heatmap.png" width="700" height="500">
   
-Lastly, we create DataFrom for revenue across all brands and clusters to see the big picture here.  
-***This one is insightful and have some marketing stratgies to consider, please take a look in 'Customer Analytics - Purchase Data.ipynb' at the bottom most for full interpretation and details***
+Lastly, we create DataFrame for revenue across all brands and clusters to see the big picture here.  
+***This one is insightful and have some marketing stratgies to consider, please take a look in 'Customer Analytics - Purchase Data.ipynb' at the bottom most for full interpretation and details***  
 <img src="./images/clusters_brand_revenue_.jpg">  
   
 That's it for data exploratory. We now move on to <b>Predictive Analytics</b>. We will use <b>Logistic Regression</b> for predicting <b>Price Elasticity of Purchase Probability<b/>  
   
 ***Again, this part is really long and insightful, we provide only a glimpse of it. Please refer to 'Customer Analytics - Predictive Analytics.ipynb' for full interpretation and details***
   
-This is the results of all price elasticity across all brands. We can see from the graph that all price elasticity is negative. Absolute value of price elasticity <b>less than 1 can infer 'inelastic'</b>. Absolute value of price elasticity <b>more than 1 can infer 'elastic'</b>. For marketing strategies, we can know at which price for which cluster that we can <b>increase the price range</b> in inelastic value and it won't affect customer purchase probability much. On the other hand, we can <b>decrease the price range</b> in elastic value to increase the purchase probability.
+This is the results of all price elasticity across all brands. We can see from the graph that all price elasticity is negative. Absolute value of price elasticity <b>less than 1 can infer 'inelastic'</b>. Absolute value of price elasticity <b>more than 1 can infer 'elastic'</b>. For marketing strategies, we can know at which price for which cluster that we can <b>increase the price range</b> in inelastic value and it won't affect customer purchase probability much. On the other hand, we can <b>decrease the price range</b> in elastic value to increase the purchase probability.  
 <img src="./images/summary_price_elasticity.png" width="700" height="500">
 
   
