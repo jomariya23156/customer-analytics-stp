@@ -36,6 +36,9 @@ This is an example data of <b>purchase data</b> (dataset/purchase data.csv):
 14. Calculate and visualize <b>own brand</b> and <b>cross brands</b> price elasticity for each cluster
 15. Predict <b>purchase quantity</b> with <b>Linear Regression</b>
 
+## Libraries:
+numpy, scipy, pandas, sklearn, matplotlib, seaborn, pickle  
+
 ## Results
 ***This is a very insightful project, if we put all the results on the Github page, it will be too long to read. If you are really interested in the results, please take a look closely at all 3 .ipynb files. We wrote all the insights we found, the best-fit strategies, and all the results in there. We will provide only brief results here in Github page.***
     
