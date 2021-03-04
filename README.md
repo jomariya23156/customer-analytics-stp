@@ -66,7 +66,7 @@ We now move on to <b>Exploratory analysis</b>
 &nbsp;&nbsp;&nbsp;&nbsp;Then we take a look at some mean and std of each important indicators; average_visits, average_purchase, and purchase ratio (calculated from purchases/visits )  
 <img src="./images/avg_visits.png" width="450" height="400"><img src="./images/avg_purchases.png" width="450" height="400"><img src="./images/avg_purchases_ratio.png" width="450" height="400">  
   
-Next, the important one, the brand choices for each cluster. <b>Brand 1 to Brand 5 are ordered by the price which means Brand 1 is the cheapest and Brand 5 is the most expensive brand.</b> We can that Fewer-Opportunity prefers buying Brand 2. Brand 4 for Well-Off. Brand 5 for Career-focused. Standard is quite distributed sparsely all over. Remember that one of the component from PCA is income. So this is intuitively correct.  
+&nbsp;&nbsp;&nbsp;&nbsp;Next, the important one, the brand choices for each cluster. <b>Brand 1 to Brand 5 are ordered by the price which means Brand 1 is the cheapest and Brand 5 is the most expensive brand.</b> We can that Fewer-Opportunity prefers buying Brand 2. Brand 4 for Well-Off. Brand 5 for Career-focused. Standard is quite distributed sparsely all over. Remember that one of the component from PCA is income. So this is intuitively correct.  
 <img src="./images/brand_choices_heatmap.png" width="700" height="500">
   
 &nbsp;&nbsp;&nbsp;&nbsp;Lastly, we create DataFrame for revenue across all brands and clusters to see the big picture here.  
