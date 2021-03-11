@@ -1,6 +1,6 @@
 # Customer Analytics with STP approach
 ## Project Overview
-&nbsp;&nbsp;&nbsp;&nbsp;We use STP marketing approach to analysis and find marketing strategies. First we segment all customers into segments or clusters by doing clustering analysis with ML. Right after, we will draw insights and predict the 3 most important customer behaviors which are Will customers buy a product?, Which brands will they buy?, How many they will buy? (quantity). Finally we will use Deep Learning Model to increase the prediction accuracy of the first question (will customers buy a product?).  
+&nbsp;&nbsp;&nbsp;&nbsp;We use STP marketing approach to analysis and find marketing strategies. First we segment all customers into segments or clusters by doing clustering analysis with ML. Right after, we will draw insights and predict the 3 most important customer behaviors which are Will customers buy a product?, Which brands will they buy?, How many they will buy? (quantity).  
 <b>*Note that we do only S and P in this project because T is more of marketing and finance than analyst.*</b>
 
 ## What STP is in a nutshell:
@@ -87,6 +87,5 @@ That's it for data exploratory. We now move on to <b>Predictive Analytics</b>. W
 &nbsp;&nbsp;&nbsp;&nbsp;Then we use price elasticity from Brand 5 and Brand 4 to calculate <b>cross price elasticity</b> and <b>own price elasticity</b> of Brand 5 and cross to Brand 4. Because these are are the most profitable ones, it would be nice to know the insight from each cluster.  
 <img src="./images/own-cross-price-elasticity.png">
   
-That's everything for now. This project is still ongoing. The only part left is to use Deep Learning to produce the powerful predictive models. And it will be done SOON!  
   
 # Thank you for reaching out and reading til the end. YOU ARE AMAZING :D
